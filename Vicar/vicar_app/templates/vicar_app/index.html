@@ -1,0 +1,18 @@
+{% extends 'vicar_app/base.html' %}
+
+
+{%block games_content %}
+{% if game_list %}
+{% for movie in game_list %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ movie.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ movie.genre }}</h6>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p>No game are available.</p>
+{% endif %}
+
+{% endblock %}
